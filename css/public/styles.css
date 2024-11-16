@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50; /* Màu nền cho tiêu đề */
+    color: white; /* Màu chữ cho tiêu đề */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Màu nền cho hàng chẵn */
+}
+
+tr:hover {
+    background-color: #ddd; /* Màu nền khi hover */
+}
+
+.pending {
+    background-color: #ffe600; /* Màu vàng cho trạng thái pending */
+}
+
+.confirmed {
+    background-color: #b2ff66; /* Màu xanh nhạt cho trạng thái confirmed */
+}
+
+.cancelled {
+    background-color: #ff6666; /* Màu đỏ nhạt cho trạng thái cancelled */
+}
+
+td {
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền */
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 400px; /* Chiều rộng tối đa của biểu mẫu */
+    margin: 0 auto; /* Canh giữa biểu mẫu */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px; /* Bo góc cho biểu mẫu */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Đổ bóng cho biểu mẫu */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #495057; /* Màu chữ cho nhãn */
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"] {
+    width: 100%; /* Chiều rộng 100% cho ô nhập */
+    padding: 12px;
+    margin-bottom: 15px; /* Khoảng cách dưới mỗi ô nhập */
+    border: 1px solid #ced4da; /* Đường viền cho ô nhập */
+    border-radius: 4px; /* Bo góc cho ô nhập */
+    box-sizing: border-box; /* Đảm bảo padding không làm tăng chiều rộng */
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus {
+    border-color: #007bff; /* Màu viền khi ô nhập được chọn */
+    outline: none; /* Bỏ viền mặc định */
+}
+
+button {
+    width: 100%; /* Chiều rộng 100% cho nút */
+    padding: 12px;
+    background-color: #007bff; /* Màu nền cho nút */
+    color: white; /* Màu chữ cho nút */
+    border: none;
+    border-radius: 4px; /* Bo góc cho nút */
+    cursor: pointer; /* Con trỏ khi hover */
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Màu nền khi hover */
+}
+    </style>
+</head>
+<body>
+    <h1>Chỉnh Sửa Đặt Chỗ</h1>
+    <form action="/edit/<%= booking.id %>" method="POST">
+        <label>Tên Khách Hàng:</label>
+        <input type="text" name="customerName" value="<%= booking.customerName %>" required>
+        <label>Ngày:</label>
+        <input type="date" name="date" value="<%= booking.date %>" required>
+        <label>Giờ:</label>
+        <input type="time" name="time" value="<%= booking.time %>" required>
+        <button type="submit">Cập Nhật</button>
+    </form>
+</body>
+</html>
